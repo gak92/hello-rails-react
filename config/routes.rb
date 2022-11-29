@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'root/index'
 
   namespace :api do
     namespace :v1 do
@@ -7,10 +8,10 @@ Rails.application.routes.draw do
   end
 
   # get 'greetings/index'
-  resources :greeting
+  resources :greetings
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "greetings#index"
+  root "root#index"
 end
